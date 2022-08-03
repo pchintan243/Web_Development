@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .card{
+            border: 2px solid red;
+            padding: 23px 12px;
+            margin: 23px 12px;
+            background-color: beige;
+            /* syntax:- y-axis shadow x-axis blur-radis spread-radius shadow color */
+            
+            /* Number positive hase to shadow box ni niche and right thase */
+            box-shadow: 10px 12px brown;
+            /* Number negative hase to shadow box ni upar and left thase */
+            box-shadow: -10px -12px brown;
+            
+            /* blur radius */
+            /* shadow ne blur karva mate */
+            /* jm pixels vadhse tem blur vadhse */
+            box-shadow: 10px 12px 12px brown;
+            
+            /* spread radius */
+            /* Use for shadow ketlo felavo 6 tena mate */
+            box-shadow: 10px 12px 12px 10px brown;
+            
+            /* shadow box ni andar lava mate inset no use thay */
+            box-shadow: inset 10px 12px brown;
+            
+            /* 1 thi vadhare color na shadow aapva hoy to */
+            box-shadow: -10px -12px brown, 5px 6px red;
+            
+        }
+        .card h2{
+            /* text ne shadow apva mate */
+            /* syntax:- y-axis shadow x-axis blur shadow color */
+            text-shadow: 3px 2px rgb(122, 212, 12);
+
+            text-shadow: 3px 2px 8px rgb(122, 212, 12);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, consectetur?</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, consectetur?</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, consectetur?</p>
+        </div>
+    </div>
+</body>
+</html>

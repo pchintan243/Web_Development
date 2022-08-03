@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property</title>
+    <style>
+        /* * property all content mate lagu pade */
+        *{
+            box-sizing: border-box;
+        }
+        header {
+            margin: auto;
+            border: 3px solid black;
+            border-radius: 5px;
+            width: 1000px;
+        }
+
+        img {
+            width: 100px;
+            margin: auto;
+            display: block;
+            /* image center lava mate */
+        }
+
+        h3 {
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 0px;
+        }
+        .box{
+            border: 3px solid red;
+            background-color: bisque;
+            border-radius: 10px;
+            margin: 5px 0px;
+            padding: 5px 4px;
+            width: 33%;
+            box-sizing: border-box; /* content always 1 j line ma adjust thase */
+            display: inline-block; /* content 1 line  ma aavi jay */
+        }
+        .container{
+            margin: auto;
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <img src="/DSC_0007.JPG" alt="">
+        <h3>Welcome Friends</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deleniti!</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deleniti!</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, deleniti!</p>
+        </div>
+    </div>
+</body>
+
+</html>

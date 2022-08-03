@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Events</title>
+    <style>
+        #btn {
+            padding: 10px;
+            color: white;
+            background-color: red;
+            border: 3px solid brown;
+            border-radius: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Broser events:
+    click
+    contextmenu
+    mouseover/mouseout
+    mousedown/mouseup
+
+    submit
+
+    focus
+    DOMContentLoaded
+    Transitonend -->
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam optio, nulla, ullam
+            laborum esse perferendis nobis sit eum assumenda veniam, ratione dicta! Nesciunt itaque ullam fuga vel
+            laboriosam quo molestias sed aut, consequatur distinctio nobis deserunt dicta doloremque officia.</p>
+    </div>
+
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run() {
+            // If your cursor is hover on the paragraph content then it will throw alert
+            // alert('Mouse Inside');
+            console.log('Mouse Inside');
+
+        });
+        para.addEventListener('mouseover', function run() {
+            // If your cursor is hover on the outside paragraph it will throw alert
+            // alert('Mouse Outside');
+            console.log('Mouse outside');
+        });
+
+        function toggleHide() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+
+            // If you click on the button then content will be hide
+            // If you click again on button then it will be show on display
+            if (para.style.display != 'none') {
+
+                para.style.display = 'none';
+            } else {
+                para.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+
+</html>

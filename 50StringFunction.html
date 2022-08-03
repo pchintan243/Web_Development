@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Function</title>
+</head>
+
+<body>
+    <script>
+        var str = "I am Chintan Patel.";
+        console.log(str);
+        var position = str.indexOf('am');
+        console.log(position);
+        position = str.lastIndexOf('Chintan');
+        console.log(position);
+
+        // Slicing is take positive as well as negative value in index
+        var substr = str.slice(1, 9);
+        // Perform slicing in different way
+        // It is not take negative value
+        // That is difference between slicing and substring function
+        substr = str.substring(1, 4);
+        console.log(substr);
+
+        // It will start print from 1 index to 4th index
+        var substr1 = str.substr(1, 4);
+        console.log(substr1);
+
+        // Replace the substring
+        var replace = str.replace('Chintan', 'Chintuu');
+        console.log(str);
+        console.log(replace);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        var newString = str.concat('Hello');
+        console.log(newString);
+
+        // trim() is use for remove  a white space in starting of a string and ending string
+        // It will not effect in between white spaces
+        var whiteSpace = "     Hello       I    am   Chintan Patel      ";
+        console.log(whiteSpace);
+        console.log(whiteSpace.trim());
+
+        // Return character at particular index
+        var char5 = str.charAt(5);
+        console.log(char5);
+
+        // Return character code
+        var char5 = str.charCodeAt(5);
+        console.log(char5);
+
+        console.log(str[5]);
+    </script>
+</body>
+
+</html>

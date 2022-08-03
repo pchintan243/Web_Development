@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On Selector</title>
+    <style>
+        h1 {
+            background-color: lightgrey;
+            text-align: center;
+            color: #c545d1;
+            font-family: cursive;
+            font-weight: bold;
+        }
+
+        div p {
+            /* anathi div ni andar jetla p 6 ama effect thase */
+            color: blue;
+        }
+
+        div>p {
+            /* div ni child ma jetla paragraph hase tya j effect karse */
+            /* baki andar andar hase to nay kare */
+            color: red;
+        }
+
+        div + p{
+            /* div patya pachi jetla paragraph aavta hase tya effect karse */
+            color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>More on selector</h1>
+    <div class="container">
+        <div class="row">
+            <p>Hello Friends</p>
+        </div>
+        <p>Hello dost</p>
+    </div>
+    <p>Hello mitra</p>
+</body>
+
+</html>

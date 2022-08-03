@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout & Clear Timeout</title>
+</head>
+
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+    <script>
+        console.log("This is tutorial");
+        // setTimeout = Allows us to run the function once after the interval of time
+        // clearTimeout = Allows us to run the function repeatedly after the interval of time
+        function greet(byeText){
+            console.log("Hello good morning "+ byeText);
+        }
+        // 5000 is in milesecond so it will display the content after 5 second
+        timeOut = setTimeout(greet, 5000, "Chintan");
+        console.log(timeOut);
+        clearTimeout(timeOut);
+
+
+        // It will be print the content after every one second
+        intervalId = setInterval(greet, 1000, "Chintan");
+        // If we use clearinterval then it will not show any content
+        clearInterval(intervalId);
+
+        function displayTime(){
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        // time display karse
+        setInterval(displayTime, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+
+        }
+        .container{
+            height: 60vh;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(241, 95, 95);
+            height: 300px;
+            width: 500px;
+            border: 5px solid red;
+            border-radius: 18px;
+            transition: all 2s ease-in-out;
+        }
+        .box:hover{
+
+            /* It is use to rotate content */
+            /* transition ma j transition aapyu hase ane related transform karse */
+            transform: rotate(360deg);
+            /* skew is one type of effect. It is use in make content 3d types */
+            transform: skew(45deg);
+            /* scale is convert your content in multiply. */
+            /* box j size 6 tena karta bamni thay jase */
+            transform: scale(2);
+
+            /* It is use to moving content in x-axis */
+            transform: translateX(212px);
+            /* It is use to moving content in y-axis */
+            transform: translateY(212px);
+
+            /* It is use to moving content on both axis */
+            transform: translate(212px, 212px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form</title>
+</head>
+
+<body>
+
+    <h2>I am creating form</h2>
+
+    <!-- div tag is work like br tag -->
+    <!-- which is work for get new line after complete the div tag -->
+    <form action="backend.php">
+        <!-- Using label tag you can click on name you will able to enter the name.. -->
+
+        <label for="name">Name :</label>
+        <div>
+            <input type="text" name="myName" id="name">
+        </div>
+        <br>
+
+        <label for="address">Address:</label>
+        <div>
+            <textarea name="myAddress" cols="300" rows="5" id="address"></textarea>
+        </div>
+        <br>
+
+        <label for="email">Email:</label>
+        <div>
+            <input type="email" name="myEmail" id="email">
+        </div>
+        <br>
+
+        <div>
+            <label for="car">Car</label>
+            <select name="myCar" id="car">
+                <option value="swift">Swift</option>
+                <option value="carn">Carnival</option>
+                <option value="verna">Verna</option>
+                <!-- Using selected tag it was select by default..\ -->
+                <option value="xuv" selected>xuv700</option>
+            </select>
+        </div>
+        <br>
+
+        <label for="date">Date:</label>
+        <div>
+            <input type="date" name="myDate" id="date">
+        </div>
+        <br>
+
+        <label for="mbilenumber">MobileNumber:</label>
+        <div>
+            <input type="number" name="myNumber" id="MobileNumber">
+        </div>
+        <br>
+
+        <div>
+            Gender: Male <input type="radio" name="myGender"> Female <input type="radio" name="myGender">
+        </div>
+        <br>
+
+        <div>
+            Hobby: <br>
+            <input type="checkbox" name="myHobby"> cricket <br>
+            <input type="checkbox" name="myHobby"> dancing <br>
+            <input type="checkbox" name="myHobby"> cycling <br>
+            <input type="checkbox" name="myHobby"> singing <br>
+            <input type="checkbox" name="myHobby"> writing <br>
+        </div>
+        <br>
+
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+        <br>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Position</title>
+    <style>
+        .container{
+            border: 2px solid darkblue;
+            border-radius: 4px;
+            background-color: aliceblue;
+            height: 4000px;
+        }
+        .box{
+            border: 3px solid red;
+            width: 100px;
+            height: 150px;
+            margin: 3px;
+            display: inline-block; /* 1 line ma lava mate */
+        }
+        /* CSS Position: static(default), relative, absolute, fixed, sticky. */
+        #box3{
+            /*relative:- use for change position and space create karse potani jagya a */
+            /* old position ma gap create karse */
+
+            /* code */
+            /* position: relative; 
+            top: 40px;
+            left: 20px; */
+            
+            /*absolute:- use for change positon relative to the position of its first parent container(div container is parent in this example) */
+            /* j main container ana related move thase */
+
+            /* code */
+            /* position: absolute; 
+            top: 40px;
+            left: 20px; */
+            
+            /* fixed:- jyare aapde scroll karia tyare content vayo upar java ne badle always show thase means k window ma always a content hase */
+            /* use for chat app */
+            /* code */
+
+            /* position: fixed;
+            right: 4px; */
+
+            /* sticky:- position te j rese but work fixed jm karse ne scroll karvathi content upar vayo nay jay */
+
+            /* code */
+            position:sticky;
+            top: 100px;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>aama code comment out karela 6</h2>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

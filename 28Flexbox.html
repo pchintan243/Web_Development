@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        h2 {
+            width: 171px;
+            margin: auto;
+            display: block;
+            color: blue;
+        }
+
+        .container {
+
+            /* flex properity for flex container */
+            border: 3px solid red;
+            height: 600px;
+            width: 100%;
+            display: flex;
+
+            /* Flexbox properties */
+            /* flex-direction: row;  */
+            /* By default */
+            /* flex-direction: column;  */
+            /* column ma gothvanu chalu karse */
+            /* flex-direction: row-reverse;  */
+            /* right side thi reverse ma gothvase */
+            /* flex-direction: column-reverse;  */
+            /* nichethi gothvanu chalu thase reverse ma */
+
+            /* wrap means sankelavu */
+            /* flex-wrap ni by default value no-wrap hoy */
+
+            /* flex-wrap na use thi content zoom out karta niche gothvato jase */
+            /* flex-wrap: wrap; */
+
+            /* reverse wrap no use bottom thi wrap thavanu start thase */
+            /* flex-wrap: wrap-reverse; */
+
+            /* flex flow ni help thi flex direction and flex wrap 1 j line ma aavi jahe */
+            /* save no. of line code */
+            /* flex-flow: row-reverse wrap; */
+
+            /* position adjust karva mate vapray justify */
+            /* you can easily adjust your content in container */
+            /* justify-content will justify the content in horizontal direction */
+            /* smj na pade to run karine joy levu */
+
+            /* center thi badho content center ma avi jase */
+            /* justify-content: center; */
+
+            /* space-between na use thi badha daba ni vache space sarkhi aavi jase */
+            /* justify-content: space-between; */
+
+            /* space-evenly na use thi badha daba ni vache space sarkhi aavse and container ni aaju baju ma pn space aavse */
+            /* justify-content: space-evenly; */
+
+            /* space-around na use thi badha daba ni aaju baju ma sarkhi space aavse */
+            /* justify-content: space-around; */
+
+            /* justify-content will justify the content in vertical direction */
+            /* using justify and align-items you can get a content in center on both axis */
+            /* aakha container ma center ma content aavi jase related to justify hase a pramane */
+            /* justify-content will justify the content in vertical direction */
+            /* align-items: center; */
+
+            /* bottom ma jase and tya justify ne realted adjust thase */
+            /* align-items: flex-end; */
+
+            /* by default flex-start and te effect nay kare position ne */
+            /* align-items: flex-start; */
+
+            /* same space mukse related height and wrap no use karvo padse */
+            /* align-items: stretch; */
+        }
+
+        .item {
+            height: 200px;
+            width: 100px;
+            background-color: aqua;
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        /* flex properity for flex item.*/
+
+        /*order:- j box no order vadhare a last ma jase */
+        /* flex-grow:- j nu flex-grow vadhare hase ne zoom out karta teni space vadharse */
+        /* flex-shrink:- shrink means nanu atle j ni shrink ni value nani hase ne a last ma nanu thase ne j ni vadhare hase a pela nanu thase zoom in karsu tyare */
+        #box1 {
+            /* order: 2; */
+            /* flex-grow: 7; */
+            /* flex-shrink: 3; */
+        }
+
+        #box2 {
+
+            /* particular item ni size adjust karva mate flex-basis use thay */
+            /* when flex-direction is set to row flex-basis will control width */
+            /* when flex-direction is set to column flex-basis will control height */
+            /* flex-basis: 350px; */
+        }
+
+        #box3{
+            /* order: 5; */
+
+            /* flex-grow: 3; */
+            /* flex-shrink: 10; */
+        }
+
+        #box4 {
+            /* adjust flex-grow, flex-shrink and flex-basis in one line */
+            /* syntax: flex: flex-grow flex-shrink flex-basis */
+            /* flex: 2 3 450px; */
+        }
+
+        #box5 {
+            /* get position on vertical start */
+            /* align-self: flex-start; */
+            /* get position on vertical end */
+            /* align-self: flex-end */
+            /* get position on vertical center */
+            /* align-self: center; */
+        }
+
+        #box6 {}
+    </style>
+</head>
+
+<body>
+    <h2>Flexbox Tutorial</h2>
+    <div class="container">
+
+        <div class="item" id="box1">First Box</div>
+        <div class="item" id="box2">Second Box</div>
+        <div class="item" id="box3">Third Box</div>
+        <div class="item" id="box4">Fourth Box</div>
+        <div class="item" id="box5">Fifth Box</div>
+        <div class="item" id="box6">Sixth Box</div>
+
+    </div>
+</body>
+
+</html>

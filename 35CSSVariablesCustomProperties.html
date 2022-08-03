@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables/Custom Properties</title>
+    <style>
+        :root{
+            /* global variable banava mate root no use thay */
+            /* root ni andar j lakhvi a badhe access thase */
+            --box-color1: blue;
+            --mwidth: 500px;
+        }
+        .box{
+            /* variable na use thi 1 jagya a color aapavano ne badhe use kari sakay */
+            --box-color: red;
+            width: 300px;
+            height: 200px;
+            background-color: var(--box-color);
+            border: 3px solid blueviolet;
+            box-shadow: 4px 5px var(--box-color1);
+            margin: 10px 10px;
+        }
+        .container{
+            max-width: var(--mwidth);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Units</title>
+    <style>
+        html{
+            font-size: 25px;
+        }
+        .container{
+            font-size: 4px;
+            border: 2px solid black;
+
+            /* page ni jetli height hase atli height automatically adjust kari lese */
+            height: 100vh; 
+            
+            /* page ni jetli width hase atli width automatically adjust kari lese */
+            width: 100vw; 
+        }
+        h1{
+            text-align: center;
+        }
+        #first{
+            /* it means font size is (px value*em value) */
+            /* parent ni j font size ni value hase ana multipy em sathe = font size */
+            font-size: 7em;
+
+            /* padding ma jo em hoy to padding (font-size*padding value) */
+            padding: 1em;
+        }
+        #second{
+            /* font-size:- (html font size*rem font value) */
+            font-size: 1rem;
+            /* padding:- (html font size*padding) */
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+</html>

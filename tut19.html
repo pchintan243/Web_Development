@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height, Width, Borders and Background</title>
+    <style>
+        
+            #first {
+                background-color: rgb(113, 227, 255);
+                height:40px;
+                width:210px;
+
+                /* border-color: rgb(255, 204, 0);
+                border-style:solid;
+                border-width: 3px; */
+
+                border: rgb(0, 30, 255) solid 3px; /* you also write in one line color, style, width */
+
+                border-radius: 10px; /* round the corner */
+            }
+
+            #second{
+                background-color: rgb(255, 106, 125);
+                height:30px;
+                width:400px;
+
+                /* Also you can give different border every side */
+                border-top: 3px solid rgb(238, 0, 255);
+                border-left: 3px solid rgba(64, 255, 0, 0.475);
+                border-right: 3px solid rgb(85, 0, 255);
+                border-bottom: 3px solid rgb(255, 0, 0);
+
+                /* Also you can give radius(corner) different sizes */
+                border-top-left-radius: 1px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 1px;
+                
+            }
+
+            #third{
+
+                height:30px;
+                width:500px;
+                background-image: url('https://media.geeksforgeeks.org/img-practice/banner/dsa-self-paced-course-overview-image.png?v=1655304021');
+
+                background-repeat: no-repeat; /* repeat-x and repeat-y will make it on x and y axis */
+
+                /* You can set position of image in many way */
+                /* first is follows on x-axis and second is follows on y-axis  */
+                background-position: center center;
+                background-position: center top;
+                background-position: 12px top;
+            }
+        
+    </style>
+</head>
+<body>
+    <p id="first">Hello my name is Chintan Patel.</p>
+
+    <p id="second">I am persuding information technology</p>
+
+    <p id="third">Web Development</p>
+</body>
+</html>

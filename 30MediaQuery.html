@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box {
+            font-size: 30px;
+            background-color: aqua;
+            border: 3px solid blue;
+            text-align: center;
+            display: none;
+        }
+
+        @media (max-width:300px) {
+            #box1 {
+                /* 0 to 300 width ma content show thase pachi 300++ ma content show thase nahi */
+                display: block;
+                background-color: bisque;
+            }
+        }
+
+        @media (min-width:300px) and (max-width:500px) {
+            #box2 {
+                /* 300 to 500 width ma content show thase pachi 300thi niche and 500 thi upar ma content show thase nahi */
+                display: block;
+                background-color: lightcoral;
+            }
+        }
+
+        @media (min-width:500px) and (max-width:800px) {
+            #box3 {
+                /* 500 to 800 width ma content show thase pachi 500thi niche and 800 thi upar ma content show thase nahi */
+                display: block;
+                background-color: lightseagreen;
+            }
+        }
+
+        @media (min-width:800px) {
+            #box4 {
+                /* 800 to infinite width ma content show thase pachi 800 thi niche ni width ma content show thase nahi */
+                display: block;
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box1">I am a tablet</div>
+    <div class="box" id="box2">I am a iphone</div>
+    <div class="box" id="box3">I am a android phone</div>
+    <div class="box" id="box4">I am a laptop</div>
+</body>
+
+</html>

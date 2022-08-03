@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container{
+            display: grid;
+            /* section padva mate */
+            grid-template-columns: 300px 150px 100px;
+            grid-template-columns: 300px 150px auto;
+            /* auto means vadheli badhi space lay lese page ma */
+            grid-template-columns: 300px auto 100px;
+            /* fr means j column hase a size related distributed karse */
+            /* In this below example 4fr means middle section is take a space 4 times to first section and third section */
+            grid-template-columns: 1fr 4fr 1fr;
+
+            /* If you need to repeat grid means you want to how many section divide */
+            /* jo vadhare part ma divide karvu hoy to 1 j sathe karva mate repeat funciton no use thay */
+            /* syntax : grid-template-columns: repeat(how many section you need, width); */
+            grid-template-columns: repeat(10, auto);
+            /* Grid-grap is use to gap between the grid */
+            grid-gap: 2rem;
+
+        }
+        .item{
+            
+            background-color: blue;
+            padding: 15px 5px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">This is item-0</div>
+        <div class="item">This is item-1</div>
+        <div class="item">This is item-2</div>
+        <div class="item">This is item-3</div>
+        <div class="item">This is item-4</div>
+        <div class="item">This is item-5</div>
+        <div class="item">This is item-6</div>
+        <div class="item">This is item-7</div>
+        <div class="item">This is item-8</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-9</div>
+        <div class="item">This is item-9</div>
+    </div>
+</body>
+</html>

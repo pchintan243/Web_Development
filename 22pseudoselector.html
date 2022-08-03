@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo selectors and more designing</title>
+    <style>
+        .container{
+            border: 3px solid rgb(255, 0, 0);
+            background-color: blanchedalmond;
+            padding: 34px;
+            margin: 34px auto;
+            width: 555px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: blue;
+            background-color: rgb(255, 13, 13);
+            /* cursor tya jase atle j color aave ana mate */
+        }
+        a:visited{
+            background-color: yellow; /* 1 var visit thay jay atle aa color jova madse */
+        }
+        a:active{
+            background-color: aqua; /* click karvathi aa color thase */
+        }
+        .btn{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightcoral;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+            border-radius: 5px;
+        }
+        .btn:hover{
+            color: black;
+            background-color: rgb(220, 182, 255); 
+            border: 3px solid black;
+
+        }     
+    </style>
+</head>
+<body>
+    <div class="container" id="cont1">
+        <h3>This is class conatainer</h3>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus reprehenderit ducimus omnis quaerat illo dolorum natus quam perferendis quia debitis quod inventore deserunt ad in laudantium, modi totam doloribus?</p>
+        <a href="https://google.com" class="btn">Read more</a>
+        <button class="btn">Contact us</button>
+    </div>
+</body>
+</html>

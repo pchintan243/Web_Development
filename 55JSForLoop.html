@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <div class="container">
+        This is about loops
+    </div>
+    <script>
+        
+        for(let i = 0; i < 3; i++) {
+            console.log(i);
+        }
+
+        let friends = ["Sumit", "krunal", "meet", "kevin", "hemang"];
+        for(let i = 0; i < friends.length; i++) {
+            console.log(friends[i]);
+        }
+        friends.forEach(function f(element) {
+            console.log(element);
+        });
+
+        for (element of friends) {
+            console.log(element);
+        }
+        let employee = {
+            name: "Chintan",
+            age: 19,
+            school: "ad",
+        }
+
+        for(key in employee) {
+            console.log(`The ${key} of employee is ${employee[key]}`);
+        }
+        let j = 0;
+        while(j < 4) {
+            console.log(`${j} is less than 4`);
+            j++;
+        }
+        let x = 4;
+        do {
+            console.log(`${x} is less than 4`);
+            x--;
+        }while(x > 0)
+    </script>
+</body>
+</html>

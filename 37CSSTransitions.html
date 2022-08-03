@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        #box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            width: 500px;
+            background-color: red;
+            /* jna par transition ni effect karvi hoy ana upar property lagadvani */
+            transition-property: background-color;
+            /* transition aatlo time chalse*/
+            transition-duration: 2s;
+
+            /* starting ma fast hase ne end ma slow thase change */
+            transition-timing-function: ease-in;
+            /* starting ma slow hase ne end ma fast thase change */
+            transition-timing-function: ease-out;
+            /* starting ma slow hase ne end ma slow thase change vache fast lagse*/
+            transition-timing-function: ease-in-out;
+
+            /* Aetla time pachi start thase transition thavanu */
+            transition-delay: 3s;
+
+            /* transition short hand properties in one line */
+            /* transition: transition-propertity transition-duration transition-timing-function transition-delay; */
+            transition: background-color 1s ease-in 3s;
+
+            /* badhi jagya a transition apply karva mate all use thay */
+            transition: all 1s ease-in 1s;
+        }
+        #box:hover{
+            /* jyare tena par cursor lay jasu tyare aa effect thase */
+            background-color: green;
+            width: 400px;
+            height: 400px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>This is CSS Transition Tutorial</h3>
+    <div class="container">
+        <div id="box">
+            This is my box
+        </div>
+    </div>
+</body>
+</html>
