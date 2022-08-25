@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            border: 2px solid red;
+            padding: 23px 12px;
+            margin: 23px 12px;
+            background-color: beige;
+            box-shadow: 10px 12px brown;
+            box-shadow: -10px -12px brown;
+            box-shadow: 10px 12px 12px brown;
+            box-shadow: 10px 12px 12px 10px brown;
+            box-shadow: inset 10px 12px brown;
+            box-shadow: -10px -12px brown, 5px 6px red;
+        }
+
+        .card h2 {
+            text-shadow: 3px 2px rgb(122, 212, 12);
+            text-shadow: 3px 2px 8px rgb(122, 212, 12);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card1">
+            <h2>Card1</h2>
+            <p>Hello my name is Chintan Patel</p>
+        </div>
+        <div class="card" id="card2">
+            <h2>Card2</h2>
+            <p>A.D. Patel Institute Of Technology</p>
+        </div>
+        <div class="card" id="card3">
+            <h2>Card3</h2>
+            <p>CVM University</p>
+        </div>
+    </div>
+</body>
+
+</html>

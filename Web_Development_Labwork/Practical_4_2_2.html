@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+    <style>
+        .container {
+            height: 50vh;
+            width: 30vw;
+            background-color: rgb(223, 176, 116);
+            display: flex;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(241, 95, 95);
+            height: 100px;
+            width: 300px;
+            border: 5px solid red;
+            border-radius: 18px;
+            transition: all 2s ease-in-out;
+        }
+        .box:hover {
+            transform: rotate(45deg);
+            transform: skew(90deg);
+            transform: scale(2);
+            transform: translateX(212px);
+            transform: translateY(212px);
+            transform: translate(212px, 212px);
+        }
+        #gradient {
+            color: white;
+            background-image: linear-gradient(to right, yellow, green, pink, blue, indigo, orange, red, grey);
+            text-align: center;
+        }
+        @media (orientation: portrait) {
+            body {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is my box
+        </div>
+    </div>
+    <div id="gradient">
+        Gradient CSS
+    </div>
+</body>
+</html>
