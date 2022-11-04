@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Expression</title>
+    <style>
+        #A,
+        #C {
+            background-color: rgb(194, 189, 188);
+        }
+    </style>
+</head>
+
+<body>  
+    <table border="2px">
+        <tr>
+            <td>Change the color</td>
+            <td id="A" onmouseenter="A()"></td>
+        </tr>
+        <tr>
+            <td>Change text:</td>
+            <td id="B" onmouseleave="B()">Hold</td>
+        </tr>
+        <tr>
+            <td>Text and color change</td>
+            <td id="C" onmouseenter="C()">Website</td>
+        </tr>
+    </table>
+    <script>
+        function A() {
+            document.getElementById("A").style = "background-color: aqua;";
+        }
+        function B() {
+            document.getElementById("B").innerHTML = "Hyyy";
+        }
+        function C() {
+            document.getElementById("C").style = "background-color: pink;";
+            document.getElementById("C").innerHTML = "WD";
+        }
+    </script>
+</body>
+
+</html>

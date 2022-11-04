@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Js Advance</title>
+</head>
+
+<body>
+    <h1 onmouseover="style.color='grey'" onmouseout="style.color='blue'">Change the color</h1>
+    <form onsubmit="confirmInput()" action="">
+        Enter your name here: <input id="fname" type="text" size="20">
+        <input type="submit">
+        <input type="text" onkeypress="fun()">
+        Some text: <input type="text" value="Dhruti Chandarana" onselect="fun1()">
+        <p id="id1"></p>
+    </form>
+    <script>
+        function confirmInput() {
+            fname = document.forms[0].fname.value;
+            alert("Hello " + fname + " what's going on?");
+        }
+        function fun() {
+            alert("Inside the input field");
+        }
+        function fun1() {
+            document.getElementById("id1").innerHTML = "Text select";
+        }
+    </script>
+</body>
+
+</html>
