@@ -1,0 +1,31 @@
+<?php
+ include 'ConnectDB.php';
+ $name=$email=$pnumber=$addr="";
+ if(isset($_POST['register'])){
+ $name = $_POST['name'];
+ $email = $_POST['email'];
+ $pnumber = $_POST['pnumber'];
+ $addr = $_POST['address'];
+ }
+ if($name != ""){
+ $sql = "INSERT INTO `userinformation`(`Name`, `Email`, `Phone Number`, `Address`)
+VALUES ('$name','$email','$pnumber','$addr')";
+ $conn->query($sql);
+ }
+?>
+<html>
+<head>
+    <title>Registration Form</title>
+</head>
+<body>
+    <form action="p8-1.php" method="post">
+        <h1>Registration Form</h1>
+        Enter Name:<input type="text" name="uname"><br>
+        Enter Address:<textarea cols="20" rows="5" name="uadd"></textarea><br>Enter E-mail:<input type="email"
+            name="umail"><br>
+        Enter PhoneNumber:<input type="text" name="uphone"><br>
+        <input type="Submit" value="Send">
+        <input type="reset" value="Cancel">
+    </form>
+</body>
+</html>

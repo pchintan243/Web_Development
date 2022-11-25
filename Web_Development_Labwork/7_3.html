@@ -1,0 +1,44 @@
+<?php
+ $username=$pass="";
+ if(isset($_POST['login'])){
+ $username = $_POST['username'];
+ $pass = $_POST['password'];
+ }
+ if($email != ""){
+ $sql = "SELECT `Username`,`Password` FROM `userinformation` WHERE
+`Username`='username' AND `Password`='$pass'";
+ $result = $conn->query($sql);
+ if($result->num_rows>0){
+ echo "<script>alert('Login successfull');</script>";
+ }else{
+ echo "<script>alert('Wrong Username or Password');</script>";
+ }
+ }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="POST">
+        <h1>Login</h1>
+        <input type="text" name="username" placeholder="Username" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Login" name="login">
+    </form>
+    <script>
+    </script>
+</body>
+
+</html>

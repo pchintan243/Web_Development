@@ -1,0 +1,39 @@
+<?php
+ include 'ConnectDB.php';
+ $name=$email=$pnumber=$addr="";
+ $sql = "SELECT * FROM `userinformation`";
+ $result = $conn->query($sql);
+ echo "<table>";
+ echo "
+ <tr>
+ <th>Name</th>
+ <th>Email</th>
+ <th>Phone number</th>
+ <th>Address</th>
+<tr>
+    ";
+    while($row = $result->fetch_assoc()){
+    $name = $row['Name'];
+    $email = $row['Email'];
+    $pnumber = $row['Phone number'];
+    $assr = $row['Address'];
+    echo "
+<tr>
+    <td>$name</td>
+    <td>$email</td>
+    <td>$pnumber</td>
+    <td>$addr</td>
+<tr>
+    ";
+    }
+    echo "</table>";
+    ?>
+<style>
+    table,
+    tr,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapsed;
+    }
+</style>

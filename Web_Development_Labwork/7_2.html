@@ -1,0 +1,35 @@
+<?php
+ $name=$email=$phonenumber="";
+ if(isset($_POST['submit'])){
+ $name = $_POST['name'];
+ $email = $_POST['email'];
+ $phonenumb = $_POST['pnumber'];
+ }
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP</title>
+</head>
+
+<body>
+    <h2>Form 1</h2>
+    <form method="POST">
+        Enter Name: <input type="text" name="name"><br>
+        Enter Email: <input type="email" name="email"><br>
+        Enter Phone number: <input type="text" name="pnumber" id=""><br>
+        <input type="submit" value="Submit" name="submit">
+    </form>
+    <h2>Form 2</h2>
+    <form>
+        Name: <input type="text" value=""><br>
+        Email: <input type="email" value=""><br>
+        Phone number: <input type="text" value="">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<?phpsession_start() ;error_reporting(1); include('../connect.php');  
+
+if(isset($_POST['btnlogin']))  
+{  
+$username=$_POST['txtusername'];  
+$password=$_POST['txtpassword'];  
+$sql="SELECT*FROMadminWHERE username='".$username. "'andpassword='". 
+$password."'";  
+$result=mysqli_query($conn,$sql);  
+$row=mysqli_fetch_array($result);  
+$_SESSION["admin-username"]=$row['username'];  
+$count=mysqli_num_rows($result);  if($count>0&&isset($_SESSION["admin-username"])){  
+{  
+header("Location:ind ex.php"); }  
+}  
+else{  
+$_SESSION['error']='WrongUsernameandPassword';  
+}  
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Adminlogin|OnlineStudentAdmissionsystem</title>
+    <link rel="shortcuticon" href=".. /images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallb
+ack">
+    <link rel="stylesheet" href="plugins /fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="plugins /icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="dist /css/adminlte.min.css">
+</head>
+
+<body class="hold-transitionlogin-page">
+    <div class="login-box">
+        <div class="login-logo"><a href="#"><b>
+                    <img src=".. /images/logo.png" width="81" height="93">
+                    <span class="style1">rit man </span>
+                </b>
+                <span class="style1"></span>
+            </a>
+        </div>
+        <!--/.login-logo-->
+        <div class="card">
+            <div class="card-bodylogin-card-body">
+                <p class="login-box-msgstyle2">ADMINLOGINFORM</p>
+                <form action="" method="post">
+                    <div class="input-groupmb-3">
+                        <input type="text" class="formcontrol" name="txtusername" placeholder="EnterUsername">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fasfa-user"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-groupmb-3">
+                        <input type="password" class="formcontrol" name="txtpassword" placeholder="EnterPassword">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                                <span class="fasfa-lock"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="icheck-primary">
+                                <input type="checkbox" id="remember">
+                                <label for="remember">
+                                    RememberMe
+                                </label>
+                            </div>
+                        </div>
+                        <!--/.col-->
+                        <div class="col-4">
+                            <button type="submit" name="btnlogin" class="btnbtn-primarybtn-block">
+                                SignIn</button>
+                        </div>
+                        <!--/.col-->
+                    </div>
+                </form>
+
+
+                <!--/.social-auth-links-->
+                <p class="mb-1">
+                    &nbsp;
+                </p>
+            </div>
+            <!-- /.login-card-body-->
+        </div>
+        <p>&nbsp;
+        </p>
+        <p>&nbsp;
+        </p>
+        <p>&nbsp;
+        </p>
+    </div>
+    <!-- /.login-box-->
+
+
+
+    <!--jQuery-->
+    <script src="plugins /jquery/jquery.min.js">
+    </script>
+    <!--Bootstrap4-->
+    <script src="plugins /bootstrap/js/bootstrap.bundle.min.js">
+    </script>
+    <!-- AdminLTE App-->
+    <script src="dist /js/adminlte.min.js">
+    </script>
+    <link rel="stylesheet" href="popup_style.css">
+    <?php if(!empty($_SESSION['success'])){?>
+    <div class="popuppopup--icon-success js_success-popuppopup--visible">
+        <div class="popupbackground">
+        </div>
+        <div class="popupcontent">
+            <h3 class="popupcontenttitle">
+                <strong>Success</strong>
+                </h1>
+                <p>
+                    <?phpecho$_SESSION['success'];?>
+                </p>
+                <p>
+                    <button class="buttonbutton--success" data-for="js_successpopup">Close</button>
+                </p>
+        </div>
+    </div>
+    <?phpunset($_SESSION["success"]);  
+}?>
+    <?php if(!empty($_SESSION['error'])){?>
+    <div class="popuppopup--icon-errorjs_errorpopuppopup--visible">
+        <div class="popupbackground">
+        </div>
+        <div class="popupcontent">
+            <h3 class="popupcontenttitle">
+                <strong>Error</strong>
+                </h1>
+                <p>
+                    <?phpecho$_SESSION['error'];?>
+                </p>
+                <p>
+                    <buttonclass="buttonbutton--error"data-for="js_errorpopup">Close</button>
+                </p>
+        </div>
+    </div>
+    <?phpunset($_SESSION["error"]);}?>
+    <script> varaddButtonTrigger = functionaddButtonTrigger(el) {
+        el.addEventListener('click', function () {
+                    varpopupEl = document.querySelector('.' + el.dataset.for);popupEl.classList.toggle('popup--visible');});
+        };
+        Array.from(document.querySelectorAll('button[data-for]')).forEach(addButtonTrigger); 
+    </script>
+</body>
+
+</html>
