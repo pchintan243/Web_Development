@@ -1,0 +1,44 @@
+hello properties:
+    Display: inline means it takes only that much space for his content.
+    It not take whole lines.
+
+    Display: block  means it takes full line for his content.
+    It does not depend on how much content are there.
+
+flex-wrap:wrap;
+This syntax is use for wrapping
+If you decrease the display size then it is automatically wrap.
+wrap means display ni andar jetlu smay chhe tetlu aavi jase bakinu niche gothvay jase.
+
+justify-content:center;
+Use for Use for vertically center
+
+align-item:center;
+Use for vertically center
+
+If you want to center the content then you can also use margin auto with set width. You can also use text align center for center text.
+display should be block. (must)
+
+display:inline-block; use for container in one line
+
+display properties : static(default), relative, absolute, fixed, sticky
+
+position: relative;
+relative to its noraml position
+height ne width no use thay.
+old position upar gap aavi jase
+gap na joto hoy to absolute position use thay.
+
+position: absolute;
+it means it is override to parent container.
+absolute position does not create any gap.
+It adjust to parent properties.
+
+
+position:fixed;
+Your container was not move if you scroll down.
+It fixed by user value.
+
+position:sticky;
+Your container was not move if you scroll down.
+Difference is it fixed in its normal position.
