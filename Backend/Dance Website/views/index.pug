@@ -1,0 +1,60 @@
+doctype html
+head
+    title Chintan Dance Academy
+    style
+        include ../static/style.css
+    body
+        nav#navbar
+            ul  
+                div#logo
+                    img(src="/static/img/logo.webp")
+                    | HDA
+                li #[a(href="/") Home]
+                li #[a(href="/") About]
+                li #[a(href="/") Services]
+                li #[a(href="/") Class Info]
+                li #[a(href="/") Contact Us]
+        section#introSection
+            | Welcome to Chintan's Dance Academy
+            br 
+            | Eat Sleep Dance Repeat
+
+        section#missionSection
+            h2 Our Mission
+            div.card
+                h3 Dance Perfection
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/1.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+
+            div.card
+                h3 Dance the way you like
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/2.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+
+            div.card
+                h3 Expert Teaching
+                div.card-box
+                    div.card-img
+                        img(src="/static/img/3.png")
+                    div.card-content
+                        p This is the best dance academy of the universe
+
+        section#sponsorSection
+            h2 Our Sponsors
+            hr
+            div#sponsors                        
+                img(src= "static/img/img1.webp", alt= "Sponsor Image", class= "spImage")
+                img(src= "/static/img/img2.png", alt= "Sponsor Image", class= "spImage")
+                img(src= "/static/img/img3.jfif", alt= "Sponsor Image", class= "spImage")
+                img(src= "/static/img/img4.jfif", alt= "Sponsor Image", class= "spImage")
+
+        footer#footer
+            | Copyright © 2019 ChintanAcademy.com | All Rights Reserved
+        script 
+            include ../static/index.js
