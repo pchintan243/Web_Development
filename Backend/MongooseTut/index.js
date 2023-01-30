@@ -1,20 +1,32 @@
 const mongoose = require('mongoose');
+mongoose.set('strictQuery', true);
+main().catch(err => console.log(err));
 
-mongoose.connect('mongodb://localhost:27017/chintanKart', { useNewUrlParser: true, useUnifiedTopology: true});
+async function main() {
+    await mongoose.connect('mongodb://127.0.0.1:27017/chintanKart');
+    console.log("we are connecting bro");
+}
 
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+const kittySchema = new mongoose.Schema({
+    name: String
+});
 
-db.once('open', function () {
-    console.log("We are connected");
-})
+kittySchema.methods.speak = function speak() {
+    const greeting = "My name is " + this.name;
+    console.log(greeting);
+};
 
-// const kittySchema = new mongoose.Schema({
-//     name: String
-// });
+const Kitten = mongoose.model('chintanKitty', kittySchema);
 
-// const Kitten = mongoose.model('Kitten', kittySchema);
+const chintanKitty = new Kitten({ name: 'chintanKitty' });
+console.log(chintanKitty.name);
 
-// const chintanKitty = new Kitten({ name: 'chintanKitty' });
-// console.log(chintanKitty.name); // 'Silence'
+// const fluffy = new Kitten({ name: 'chintanpatel' });
+chintanKitty.save();
+// chintanKitty.speak();
 
+const kittens = Kitten.find({ name: 'chintanpatel' });
+console.log(kittens);
+
+// fluffy.save();
+// fluffy.speak();
